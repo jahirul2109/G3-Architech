@@ -19,6 +19,7 @@
 .discrip {
     color: var(--dark-3-color);
     font-size: 0.8rem;
+    line-height: 25px;
 }
 .btn {
     padding: 15px 15px;
@@ -32,13 +33,13 @@
 .flex {
     display: flex;
 }
-.gird {
+.grid {
     display: grid;
 }
 header {
     background-color: var(--bg-color);
 }
-nav , #brand {
+nav , #brand ,#team {
     width: 75%;
     margin: 0 auto;
 }
@@ -62,10 +63,10 @@ nav , #brand {
     font-weight: bold;
 
 }
-#brand img {
+#brand img , .photo-container img {
     width: 100%;
 }
-#brand, .details{
+#brand, .details, .features{
     flex-direction: column;
 }
 .details {
@@ -74,4 +75,28 @@ nav , #brand {
 }
 #brand {
     padding-bottom: 50px ;
+}
+#team {
+    justify-content: space-between;
+    gap: 50px;
+    padding: 0 50px;
+    margin: 100px auto;
+}
+.photo-container, .features {
+    width: 50%;
+}
+.photo-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.features {
+    justify-content: center;
+    gap: 20px;
+}
+#quick {
+    font-weight: 500;
+    color: var(--dark-3-color);
+}
+#feature {
+    color: #FF900E;
 }
