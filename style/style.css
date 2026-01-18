@@ -18,7 +18,7 @@
 }
 .discrip {
     color: var(--dark-3-color);
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 25px;
     font-weight: 500;
 }
@@ -43,7 +43,7 @@
 header {
     background-color: var(--bg-color);
 }
-nav , #brand ,#team , #features{
+nav , #brand ,#team , #features , #dashborad{
     width: 75%;
     margin: 0 auto;
 }
@@ -124,7 +124,7 @@ nav , #brand ,#team , #features{
     gap: 10px;
 }
 .point {
-    padding: 20px;
+    padding: 10px 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
     background: rgba(255, 255, 255, 1);
@@ -135,6 +135,7 @@ nav , #brand ,#team , #features{
     font-weight: 600;
 }
 .point-dis {
+    margin-top: 10px;
     line-height: 16px;
 }
 .year {
@@ -149,13 +150,50 @@ nav , #brand ,#team , #features{
     margin-top: -100px;
     margin-left: -80px;
 }
+#dashborad {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+#dashborad .card-container {
+    display: flex;
+    justify-content: space-around;
 
+}
+#dashborad .card {
+    border: 1px solid rgba(255, 144, 14, 1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    padding: 10px;
+    gap: 10px;
+}
+#dashborad .card img {
+    width: 100%;
+}
+.digit {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: rgba(66, 66, 66, 1);
+}
+#dashborad .discrip {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--dark-3-color);
+
+}
 /* Responsive for mobile device */
 @media screen and (max-width : 576px) {
 html {
         font-size: 60%;
     }
-nav , #brand ,#team {
+nav , #brand ,#team, #features ,#dashborad {
     width: 90%;
     margin: 0 auto;
     }
@@ -185,6 +223,7 @@ nav , #brand ,#team {
     border-radius: 6px;
 }
 #team {
+    margin: 50px auto;
     flex-direction: column;
     padding: 0;
 }
@@ -200,6 +239,21 @@ nav , #brand ,#team {
 #features {
     flex-direction: column-reverse;
     gap: 50px;
+    margin: 50px auto;
+}
+#dashborad {
+    margin: 50px auto;
+    gap: 50px;
+}
+#dashborad .card {
+    width: 200px;
+    height: 200px;
+}
+#dashborad .card-container {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 }
