@@ -22,6 +22,7 @@
     line-height: 25px;
     font-weight: 500;
 }
+/* paimary button */
 .btn {
     padding: 15px 15px;
     color: white;
@@ -30,6 +31,13 @@
     border: none;
     font-size: 1.3rem;
     font-weight: 600;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: white;
+    border: 1px solid rgba(255, 144, 14, 1);
+    color: #FF900E; 
+    padding: calc(15px - 1px );
 }
 .flex {
     display: flex;
@@ -43,9 +51,22 @@
 header {
     background-color: var(--bg-color);
 }
-nav , #brand ,#team , #features , #dashborad{
+/* Width set */
+nav , #brand ,#team , #features , #dashborad ,#sponser, footer{
     width: 75%;
     margin: 0 auto;
+}
+/* Nav-bar start */
+.logo {
+    width: 45px;
+}
+.logo img {
+    width: 100%;
+    border-radius: 50px;
+}
+#nav .name a {
+ text-decoration: none;
+ color: #000000;
 }
 #nav ,.details{
     padding: 50px 0;
@@ -63,6 +84,7 @@ nav , #brand ,#team , #features , #dashborad{
     font-weight: 600;
 }
 
+/* banner start */
 #brand .title {
     font-size: 3.5rem;
     font-weight: bold;
@@ -81,6 +103,8 @@ nav , #brand ,#team , #features , #dashborad{
 #brand {
     padding-bottom: 50px ;
 }
+
+/* Team Section Start */
 #team {
     justify-content: space-between;
     gap: 50px;
@@ -105,6 +129,8 @@ nav , #brand ,#team , #features , #dashborad{
 #feature {
     color: #FF900E;
 }
+
+/* Features Section Start */
 #features {
     gap: 100px;
 }
@@ -150,6 +176,8 @@ nav , #brand ,#team , #features , #dashborad{
     margin-top: -100px;
     margin-left: -80px;
 }
+
+/* Dashborad Section Start */
 #dashborad {
     margin: 100px auto;
     display: flex;
@@ -188,6 +216,65 @@ nav , #brand ,#team , #features , #dashborad{
     color: var(--dark-3-color);
 
 }
+
+/* Sponsors Section Start */
+#sponser {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+#heading {
+    text-align: center;
+}
+#heading .discrip {
+    margin-top: 20px;
+}
+.meadia-card {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meadia-card .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    gap: 30px;
+    animation: scroll 20s linear infinite;
+}
+
+/* Animation Add */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.sp-img {
+    width: 130px;
+    height: 50px;
+    filter: grayscale(100%);
+}
+.sp-img:hover {
+    filter: none;
+}
+.sp-img img {
+    width: 100%;
+}
+
+/* Footer Section Start */
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    background-color: var(--bg-color);
+    padding: 50px;
+}
+
 /* Responsive for mobile device */
 @media screen and (max-width : 576px) {
 html {
@@ -200,8 +287,15 @@ nav , #brand ,#team, #features ,#dashborad {
 .nav-ul {
     display: none;
     }
+.logo {
+    display: block;
+}
+.name {
+    display: none;
+}
 .icon {
-    display: flex;
+    display: block;
+    font-size: 25px;
     }
 .discrip {
     line-height: 20px;
@@ -255,5 +349,34 @@ nav , #brand ,#team, #features ,#dashborad {
     justify-content: center;
     align-items: center;
 }
+footer {
+    padding: 20px;
+}
 
+}
+
+/*Responsive for tablet device  */
+@media screen and (min-width : 577px) and (max-width:1024px) {
+    #team {
+    margin: 50px auto;
+    flex-direction: column;
+    padding: 0;
+}
+
+    .photo-container, .features, .photo , #features .details-2 {
+    width: 100%;
+}
+    .features {
+        text-align: center;
+    }
+    #features {
+        flex-direction: column-reverse;
+    }
+    .photo .btn {
+        display: none;
+    }
+    #dashborad .card-container {
+        flex-wrap: wrap;
+    }
+    
 }
