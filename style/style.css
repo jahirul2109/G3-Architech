@@ -362,7 +362,7 @@ footer {
 }
 
 /*Responsive for tablet device  */
-@media screen and (min-width : 577px) and (max-width:1024px) {
+@media screen and (min-width : 576px) and (max-width:1024px) {
     #team {
     margin: 50px auto;
     flex-direction: column;
@@ -383,6 +383,7 @@ footer {
     }
     #dashborad .card-container {
         flex-wrap: wrap;
+        gap: 20px;
     }
     
 }
